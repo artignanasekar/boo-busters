@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Shooter Game</title>
+    <script src="./lib/phaser.js"></script>
+    <!-- Load all scripts the traditional way since module loading might be causing issues -->
+    <script src="./src/Scenes/TitleScene.js"></script>
+    <script src="./src/Scenes/Monster.js"></script>
+    <script src="./src/Scenes/WaveIntroScene.js"></script>
+    <script src="./src/Scenes/Wave2.js"></script>
+    <script src="./src/Scenes/BossIntroScene.js"></script>
+    <script src="./src/Scenes/BossScene.js"></script>
+    <script src="./src/Scenes/EndGameScene.js"></script>
+    <script src="./src/main.js"></script>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #phaser-game {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #description {
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="phaser-game"></div>
+        <div id="description"></div>
+    </div>
+
+    <!-- Add error logging -->
+    <script>
+        window.addEventListener('error', function(event) {
+            console.error('Error caught by window.onerror:', event.message, 'at', event.filename, 'line', event.lineno);
+            alert('Game error: ' + event.message);
+        });
+    </script>
+</body>
+</html>
